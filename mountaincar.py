@@ -27,6 +27,8 @@ epoches = 7000
 e= 100
 
 for epoch in range(epoches):
+    if epoch==2500:
+        env = gym.make("MountainCar-v0", render_mode="human")
     obs, info = env.reset()
     done = False
     truncated, terminated = False, False
@@ -62,3 +64,4 @@ print(f"Lowest Q-value (Most pain): {np.min(q)}")
 
 # 3. Look at the exact center of the table (where the car usually starts)
 print(f"Center Q-values: {q[15, 15]}")
+#4
