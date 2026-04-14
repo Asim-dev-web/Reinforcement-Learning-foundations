@@ -1,0 +1,3 @@
+python
+gymnasium
+numpy
